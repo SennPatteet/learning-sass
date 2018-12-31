@@ -1,0 +1,1 @@
+#container{margin:auto;width:60%}body{background-color:#CA6899}h1{font-family:"Lobster",cursive;text-align:center}nav ul{display:flex;justify-content:center;list-style:none;padding:0px}nav ul :nth-child(3){background-color:#389b93}nav li{padding:10px}nav a{text-decoration:none}.extend1 h2,.extend2 h2{color:#389b93}.extend1 p,.extend2 p{line-height:1.5}nav a{color:green}

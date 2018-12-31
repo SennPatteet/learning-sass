@@ -1,0 +1,81 @@
+// VARIABLES ---------------------------------------------------------
+
+$color: #CA6899;
+$color2: #389b93;
+$font: 'Lobster', cursive;
+
+// MIXIN ---------------------------------------------------------
+
+@mixin container_center {
+  margin: auto;
+  width: 60%;
+}
+
+@mixin nav_flex {
+  display: flex;
+  justify-content: center;
+}
+
+// CODE ---------------------------------------------------------
+
+#container {
+  @include container_center;
+}
+
+
+body {
+  background-color: $color;
+}
+
+h1 {
+  font-family: $font;
+  text-align: center;
+}
+
+// NEST ---------------------------------------------------------
+
+nav {
+
+  ul {
+    @include nav_flex;
+    list-style: none;
+    padding: 0px;
+
+    :nth-child(3) {
+      background-color: $color2;
+    }
+
+  }
+
+  li {
+    padding: 10px;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
+
+// EXTEND ---------------------------------------------------------
+
+%test {
+  h2 {
+    color: $color2;
+  }
+
+  p {
+    line-height: 1.5;
+  }
+}
+
+.extend1 {
+  @extend %test;
+}
+
+.extend2 {
+  @extend %test;
+}
+
+// PARTIAL (see _partial.scss) ---------------------------------------------------------
+
+@import 'partial';
